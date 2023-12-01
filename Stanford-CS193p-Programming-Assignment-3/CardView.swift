@@ -9,9 +9,10 @@ import SwiftUI
 
 struct CardView: View {
     var body: some View {
-        VStack {
-            Diamond()
-                .aspectRatio(2/1, contentMode: .fit)
+        GeometryReader { geometry in
+            Squiggle()
+                .foregroundStyle(.orange)
+                .aspectRatio(3/2, contentMode: .fit)
         }
     }
 }

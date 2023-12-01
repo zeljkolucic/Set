@@ -13,6 +13,7 @@
 		E4AAB8742AFD140800470542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AAB8732AFD140800470542 /* Preview Assets.xcassets */; };
 		E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF32B1A3B1800AC9960 /* CardView.swift */; };
 		E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */; };
+		E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E4AAB8732AFD140800470542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4CBDAF32B1A3B1800AC9960 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E4AAB86E2AFD140700470542 /* ContentView.swift */,
 				E4CBDAF32B1A3B1800AC9960 /* CardView.swift */,
 				E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */,
+				E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */,
 				E4AAB8702AFD140800470542 /* Assets.xcassets */,
 				E4AAB8722AFD140800470542 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */,
 				E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */,
 				E4AAB86F2AFD140700470542 /* ContentView.swift in Sources */,
 				E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */,
