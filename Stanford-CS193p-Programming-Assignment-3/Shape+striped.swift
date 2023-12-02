@@ -32,7 +32,7 @@ struct Stripe: Shape {
         return path
     }
     
-    struct Constants {
+    private struct Constants {
         static let numberOfLines: CGFloat = 20
     }
 }

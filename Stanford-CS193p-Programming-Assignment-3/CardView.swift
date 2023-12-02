@@ -21,6 +21,7 @@ struct CardView: View {
             }
         }
         .padding()
+        .cardify()
     }
     
     var shape: some View {
@@ -95,5 +96,6 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(Card(color: .green, number: .one, shape: .squiggle, shading: .solid))
+    CardView(Card(color: .pink, number: .three, shape: .squiggle, shading: .striped))
+        .padding()
 }
