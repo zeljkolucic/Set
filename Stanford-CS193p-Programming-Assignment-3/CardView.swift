@@ -38,35 +38,6 @@ struct Card {
     let shading: Shading
 }
 
-struct Shape: SwiftUI.Shape {
-    let shape: Card.Shape
-    
-    private let lineWidth: CGFloat = 2
-    
-    func path(in rect: CGRect) -> Path {
-        switch shape {
-        case .diamond:
-            return Diamond().path(in: rect)
-        case .squiggle:
-            return Squiggle().path(in: rect)
-        case .oval:
-            return Capsule().path(in: rect)
-        }
-    }
-    
-    @ViewBuilder
-    func shaded(by shading: Card.Shading) -> some View {
-        switch shading {
-        case .solid:
-            self
-        case .striped:
-            striped()
-        case .open:
-            stroke(lineWidth: lineWidth)
-        }
-    }
-}
-
 struct CardView: View {
     let card: Card
     
@@ -122,6 +93,35 @@ struct CardView: View {
             return 3/2
         case .oval:
             return 2
+        }
+    }
+    
+    private struct Shape: SwiftUI.Shape {
+        let shape: Card.Shape
+        
+        private let lineWidth: CGFloat = 2
+        
+        func path(in rect: CGRect) -> Path {
+            switch shape {
+            case .diamond:
+                return Diamond().path(in: rect)
+            case .squiggle:
+                return Squiggle().path(in: rect)
+            case .oval:
+                return Capsule().path(in: rect)
+            }
+        }
+        
+        @ViewBuilder
+        func shaded(by shading: Card.Shading) -> some View {
+            switch shading {
+            case .solid:
+                self
+            case .striped:
+                striped()
+            case .open:
+                stroke(lineWidth: lineWidth)
+            }
         }
     }
 }

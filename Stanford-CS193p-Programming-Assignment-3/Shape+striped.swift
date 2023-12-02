@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension SwiftUI.Shape {
+extension Shape {
     func striped() -> some View {
         ZStack {
             Stripe()
@@ -19,7 +19,7 @@ extension SwiftUI.Shape {
     }
 }
 
-struct Stripe: SwiftUI.Shape {
+struct Stripe: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let width = rect.width

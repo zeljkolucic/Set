@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreGraphics
 
-struct Diamond: SwiftUI.Shape {
+struct Diamond: Shape {
     func path(in rect: CGRect) -> Path {
         let leftCorner = CGPoint(x: rect.minX, y: rect.midY)
         let topCorner = CGPoint(x: rect.midX, y: rect.minY)
