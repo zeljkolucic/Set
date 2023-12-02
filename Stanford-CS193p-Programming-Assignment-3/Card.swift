@@ -7,31 +7,32 @@
 
 import Foundation
 
-struct Card {
-    enum Color {
+struct Card: Identifiable {
+    enum Color: CaseIterable {
         case green
         case purple
         case pink
     }
     
-    enum Number {
+    enum Number: CaseIterable {
         case one
         case two
         case three
     }
     
-    enum Shape {
+    enum Shape: CaseIterable {
         case diamond
         case squiggle
         case oval
     }
     
-    enum Shading {
+    enum Shading: CaseIterable {
         case solid
         case striped
         case open
     }
     
+    let id = UUID()
     let color: Color
     let number: Number
     let shape: Shape

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4AAB86D2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */; };
-		E4AAB86F2AFD140700470542 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AAB86E2AFD140700470542 /* ContentView.swift */; };
+		E4AAB86F2AFD140700470542 /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AAB86E2AFD140700470542 /* SetGameView.swift */; };
 		E4AAB8712AFD140800470542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AAB8702AFD140800470542 /* Assets.xcassets */; };
 		E4AAB8742AFD140800470542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AAB8732AFD140800470542 /* Preview Assets.xcassets */; };
 		E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF32B1A3B1800AC9960 /* CardView.swift */; };
@@ -18,12 +18,14 @@
 		E4CBDAFC2B1BF3E000AC9960 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAFB2B1BF3E000AC9960 /* Card.swift */; };
 		E4CBDAFE2B1BF51300AC9960 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAFD2B1BF51300AC9960 /* Cardify.swift */; };
 		E4CBDB002B1BF63500AC9960 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAFF2B1BF63500AC9960 /* AspectVGrid.swift */; };
+		E4CBDB022B1BF6F500AC9960 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDB012B1BF6F500AC9960 /* SetGame.swift */; };
+		E4CBDB042B1BF81500AC9960 /* SetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDB032B1BF81500AC9960 /* SetGameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4AAB8692AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-CS193p-Programming-Assignment-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stanford_CS193p_Programming_Assignment_3App.swift; sourceTree = "<group>"; };
-		E4AAB86E2AFD140700470542 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E4AAB86E2AFD140700470542 /* SetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
 		E4AAB8702AFD140800470542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4AAB8732AFD140800470542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4CBDAF32B1A3B1800AC9960 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		E4CBDAFB2B1BF3E000AC9960 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E4CBDAFD2B1BF51300AC9960 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		E4CBDAFF2B1BF63500AC9960 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		E4CBDB012B1BF6F500AC9960 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		E4CBDB032B1BF81500AC9960 /* SetGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */,
-				E4AAB86E2AFD140700470542 /* ContentView.swift */,
+				E4AAB86E2AFD140700470542 /* SetGameView.swift */,
+				E4CBDB012B1BF6F500AC9960 /* SetGame.swift */,
+				E4CBDB032B1BF81500AC9960 /* SetGameViewModel.swift */,
 				E4CBDAF32B1A3B1800AC9960 /* CardView.swift */,
 				E4CBDAFD2B1BF51300AC9960 /* Cardify.swift */,
 				E4CBDAFB2B1BF3E000AC9960 /* Card.swift */,
@@ -160,9 +166,11 @@
 			files = (
 				E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */,
 				E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */,
+				E4CBDB022B1BF6F500AC9960 /* SetGame.swift in Sources */,
 				E4CBDAFE2B1BF51300AC9960 /* Cardify.swift in Sources */,
 				E4CBDAFC2B1BF3E000AC9960 /* Card.swift in Sources */,
-				E4AAB86F2AFD140700470542 /* ContentView.swift in Sources */,
+				E4AAB86F2AFD140700470542 /* SetGameView.swift in Sources */,
+				E4CBDB042B1BF81500AC9960 /* SetGameViewModel.swift in Sources */,
 				E4CBDAFA2B1BE3CA00AC9960 /* Shape+striped.swift in Sources */,
 				E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */,
 				E4AAB86D2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift in Sources */,
