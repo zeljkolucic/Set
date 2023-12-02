@@ -14,6 +14,7 @@
 		E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF32B1A3B1800AC9960 /* CardView.swift */; };
 		E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */; };
 		E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */; };
+		E4CBDAFA2B1BE3CA00AC9960 /* Shape+striped.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF92B1BE3CA00AC9960 /* Shape+striped.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E4CBDAF32B1A3B1800AC9960 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
+		E4CBDAF92B1BE3CA00AC9960 /* Shape+striped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+striped.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */,
 				E4AAB86E2AFD140700470542 /* ContentView.swift */,
 				E4CBDAF32B1A3B1800AC9960 /* CardView.swift */,
+				E4CBDAF92B1BE3CA00AC9960 /* Shape+striped.swift */,
 				E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */,
 				E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */,
 				E4AAB8702AFD140800470542 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */,
 				E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */,
 				E4AAB86F2AFD140700470542 /* ContentView.swift in Sources */,
+				E4CBDAFA2B1BE3CA00AC9960 /* Shape+striped.swift in Sources */,
 				E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */,
 				E4AAB86D2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift in Sources */,
 			);

@@ -7,60 +7,125 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct Card {
+    enum Color {
+        case green
+        case purple
+        case pink
+    }
+    
+    enum Number {
+        case one
+        case two
+        case three
+    }
+    
+    enum Shape {
+        case diamond
+        case squiggle
+        case oval
+    }
+    
     enum Shading {
         case solid
         case striped
         case open
     }
     
+    let color: Color
+    let number: Number
+    let shape: Shape
+    let shading: Shading
+}
+
+struct Shape: SwiftUI.Shape {
+    let shape: Card.Shape
+    
+    private let lineWidth: CGFloat = 2
+    
+    func path(in rect: CGRect) -> Path {
+        switch shape {
+        case .diamond:
+            return Diamond().path(in: rect)
+        case .squiggle:
+            return Squiggle().path(in: rect)
+        case .oval:
+            return Capsule().path(in: rect)
+        }
+    }
+    
+    @ViewBuilder
+    func shaded(by shading: Card.Shading) -> some View {
+        switch shading {
+        case .solid:
+            self
+        case .striped:
+            striped()
+        case .open:
+            stroke(lineWidth: lineWidth)
+        }
+    }
+}
+
+struct CardView: View {
+    let card: Card
+    
+    init(_ card: Card) {
+        self.card = card
+    }
+    
     var body: some View {
         VStack {
-            Squiggle()
-                .striped()
-                .foregroundStyle(.orange)
-                .aspectRatio(3/2, contentMode: .fit)
-            Squiggle()
-                .aspectRatio(3/2, contentMode: .fit)
-            Squiggle()
-                .stroke(lineWidth: 4)
-                .aspectRatio(3/2, contentMode: .fit)
+            ForEach(0..<number, id: \.self) { _ in
+                shape
+            }
         }
-        .foregroundStyle(.orange)
+        .foregroundStyle(color)
         .padding()
+    }
+    
+    var shape: some View {
+        Shape(shape: card.shape)
+            .shaded(by: card.shading)
+            .aspectRatio(aspectRatio, contentMode: .fit)
+            .foregroundStyle(color)
+        
+    }
+    
+    var color: Color {
+        switch card.color {
+        case .green:
+            return .green
+        case .purple:
+            return .purple
+        case .pink:
+            return .pink
+        }
+    }
+    
+    var number: Int {
+        switch card.number {
+        case .one:
+            return 1
+        case .two:
+            return 2
+        case .three:
+            return 3
+        }
+    }
+    
+    var aspectRatio: CGFloat {
+        switch card.shape {
+        case .diamond:
+            return 2
+        case .squiggle:
+            return 3/2
+        case .oval:
+            return 2
+        }
     }
 }
 
 #Preview {
-    CardView()
-}
-
-extension Shape {
-    func striped() -> some View {
-        ZStack {
-            Stripe()
-                .stroke(lineWidth: 2)
-                .clipShape(self)
-
-            self.stroke(lineWidth: 4)
-        }
-    }
-}
-
-struct Stripe: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.width
-        let height = rect.height
-        
-        for x in stride(from: 0, through: width, by: width / Constants.numberOfLines) {
-            path.move(to: CGPoint(x: x, y: 0))
-            path.addLine(to: CGPoint(x: x, y: height))
-        }
-        return path
-    }
-    
-    struct Constants {
-        static let numberOfLines: CGFloat = 20
-    }
+    CardView(Card(color: .green, number: .one, shape: .squiggle, shading: .solid))
 }

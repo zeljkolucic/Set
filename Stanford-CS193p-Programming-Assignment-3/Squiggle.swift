@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreGraphics
 
-struct Squiggle: Shape {
+struct Squiggle: SwiftUI.Shape {
     func path(in rect: CGRect) -> Path {
         let startPoint = CGPoint(x: 0.9252669 * rect.width, y: 0.22865854 * rect.height)
         let points = [
