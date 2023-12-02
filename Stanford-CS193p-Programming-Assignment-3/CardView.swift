@@ -7,37 +7,6 @@
 
 import SwiftUI
 
-struct Card {
-    enum Color {
-        case green
-        case purple
-        case pink
-    }
-    
-    enum Number {
-        case one
-        case two
-        case three
-    }
-    
-    enum Shape {
-        case diamond
-        case squiggle
-        case oval
-    }
-    
-    enum Shading {
-        case solid
-        case striped
-        case open
-    }
-    
-    let color: Color
-    let number: Number
-    let shape: Shape
-    let shading: Shading
-}
-
 struct CardView: View {
     let card: Card
     
