@@ -20,7 +20,6 @@ struct CardView: View {
                 shape
             }
         }
-        .foregroundStyle(color)
         .padding()
     }
     
