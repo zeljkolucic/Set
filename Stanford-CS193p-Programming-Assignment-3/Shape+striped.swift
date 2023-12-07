@@ -8,13 +8,13 @@
 import SwiftUI
 
 extension Shape {
-    func striped() -> some View {
+    func striped(lineWidth: CGFloat) -> some View {
         ZStack {
             Stripe()
                 .stroke(lineWidth: 2)
                 .clipShape(self)
 
-            self.stroke(lineWidth: 4)
+            self.stroke(lineWidth: lineWidth)
         }
     }
 }

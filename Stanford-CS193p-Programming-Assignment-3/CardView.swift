@@ -25,7 +25,7 @@ struct CardView: View {
     }
     
     var shape: some View {
-        Shape(shape: card.shape)
+        Shape(card.shape)
             .shaded(by: card.shading)
             .aspectRatio(aspectRatio, contentMode: .fit)
             .foregroundStyle(color)
@@ -44,14 +44,7 @@ struct CardView: View {
     }
     
     var number: Int {
-        switch card.number {
-        case .one:
-            return 1
-        case .two:
-            return 2
-        case .three:
-            return 3
-        }
+        return card.number.rawValue
     }
     
     var aspectRatio: CGFloat {
@@ -68,7 +61,11 @@ struct CardView: View {
     private struct Shape: SwiftUI.Shape {
         let shape: Card.Shape
         
-        private let lineWidth: CGFloat = 2
+        init(_ shape: Card.Shape) {
+            self.shape = shape
+        }
+        
+        private let lineWidth: CGFloat = 4
         
         func path(in rect: CGRect) -> Path {
             switch shape {
@@ -87,7 +84,7 @@ struct CardView: View {
             case .solid:
                 self
             case .striped:
-                striped()
+                striped(lineWidth: lineWidth)
             case .open:
                 stroke(lineWidth: lineWidth)
             }

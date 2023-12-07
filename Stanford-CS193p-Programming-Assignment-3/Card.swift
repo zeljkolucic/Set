@@ -14,10 +14,10 @@ struct Card: Identifiable {
         case pink
     }
     
-    enum Number: CaseIterable {
-        case one
-        case two
-        case three
+    enum Number: Int, CaseIterable {
+        case one = 1
+        case two = 2
+        case three = 3
     }
     
     enum Shape: CaseIterable {
