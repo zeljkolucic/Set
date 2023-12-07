@@ -13,4 +13,12 @@ class SetGameViewModel: ObservableObject {
     var cards: [Card] {
         game.cards
     }
+    
+    var deckOfCards: [Card] {
+        game.deckOfCards
+    }
+    
+    func draw() {
+        game.draw()
+    }
 }

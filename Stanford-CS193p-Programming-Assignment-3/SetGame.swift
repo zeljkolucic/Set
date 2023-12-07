@@ -8,25 +8,40 @@
 import Foundation
 
 struct SetGame {
-    private let deckOfCards: [Card] = createDeckOfCards()
-    private let initialCardNumber = 12
+    private let initialNumberOfCards = 12
+    private let numberOfCardsToDraw = 3
     
-    var cards: [Card] {
-        deckOfCards.dropLast(deckOfCards.count - initialCardNumber)
-    }
+    var deckOfCards: [Card]
+    var cards: [Card]
     
-    private static func createDeckOfCards() -> [Card] {
-        var cards = [Card]()
+    init() {
+        deckOfCards = [Card]()
         for color in Card.Color.allCases {
             for number in Card.Number.allCases {
                 for shape in Card.Shape.allCases {
                     for shading in Card.Shading.allCases {
                         let card = Card(color: color, number: number, shape: shape, shading: shading)
-                        cards.append(card)
+                        deckOfCards.append(card)
                     }
                 }
             }
         }
-        return cards.shuffled()
+        deckOfCards.shuffle()
+        cards = deckOfCards.draw(initialNumberOfCards)
+    }
+    
+    mutating func draw() {
+        let drawnCards = deckOfCards.draw(numberOfCardsToDraw)
+        cards += drawnCards
+    }
+}
+
+extension Array where Element == Card {
+    mutating func draw(_ numberOfCards: Int) -> [Card] {
+        guard numberOfCards <= count else { return [] }
+        
+        let drawnCards = prefix(numberOfCards)
+        removeFirst(numberOfCards)
+        return Array(drawnCards)
     }
 }

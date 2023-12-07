@@ -21,13 +21,14 @@ extension Shape {
 
 struct Stripe: Shape {
     func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let width = rect.width
-        let height = rect.height
+        guard rect.width != 0, rect.height != 0 else {
+            return Path()
+        }
         
-        for x in stride(from: 0, through: width, by: width / Constants.numberOfLines) {
+        var path = Path()
+        for x in stride(from: 0, through: rect.width, by: rect.width / Constants.numberOfLines) {
             path.move(to: CGPoint(x: x, y: 0))
-            path.addLine(to: CGPoint(x: x, y: height))
+            path.addLine(to: CGPoint(x: x, y: rect.height))
         }
         return path
     }

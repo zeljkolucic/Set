@@ -19,8 +19,18 @@ struct SetGameView: View {
                 CardView(card)
                     .padding(spacing)
             }
+            drawButton
+                .opacity(viewModel.deckOfCards.isEmpty ? 0 : 1)
         }
         .padding()
+    }
+    
+    private var drawButton: some View {
+        Button(action: {
+            viewModel.draw()
+        }, label: {
+            Text("Draw 3")
+        })
     }
 }
 
