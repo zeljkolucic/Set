@@ -20,7 +20,7 @@ struct Diamond: Shape {
         path.addLine(to: topCorner)
         path.addLine(to: rightCorner)
         path.addLine(to: bottomCorner)
-        path.addLine(to: leftCorner)
+        path.closeSubpath()
         return path
     }
 }
