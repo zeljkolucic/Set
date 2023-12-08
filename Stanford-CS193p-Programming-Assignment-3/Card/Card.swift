@@ -37,4 +37,6 @@ struct Card: Identifiable {
     let number: Number
     let shape: Shape
     let shading: Shading
+    
+    var isChosen: Bool = false
 }

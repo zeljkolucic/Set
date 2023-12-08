@@ -15,14 +15,22 @@ struct SetGameView: View {
         
     var body: some View {
         VStack {
-            AspectVGrid(viewModel.cards, aspectRatio: aspectRatio) { card in
-                CardView(card)
-                    .padding(spacing)
-            }
+            cards
             drawButton
                 .opacity(viewModel.deckOfCards.isEmpty ? 0 : 1)
         }
         .padding()
+    }
+    
+    private var cards: some View {
+        AspectVGrid(viewModel.cards, aspectRatio: aspectRatio) { card in
+            CardView(card)
+                .padding(spacing)
+                .scaleEffect(card.isChosen ? 0.8 : 1)
+                .onTapGesture {
+                    viewModel.choose(card)
+                }
+        }
     }
     
     private var drawButton: some View {

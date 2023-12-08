@@ -10,9 +10,14 @@ import Foundation
 struct SetGame {
     private let initialNumberOfCards = 12
     private let numberOfCardsToDraw = 3
+    private let maximumNumberOfChosenCards = 3
     
     var deckOfCards: [Card]
     var cards: [Card]
+    
+    var chosenCards: [Card] {
+        cards.filter { $0.isChosen }
+    }
     
     init() {
         deckOfCards = [Card]()
@@ -33,6 +38,35 @@ struct SetGame {
     mutating func draw() {
         let drawnCards = deckOfCards.draw(numberOfCardsToDraw)
         cards += drawnCards
+    }
+    
+    mutating func choose(_ card: Card) {
+        guard chosenCards.count < maximumNumberOfChosenCards else { return }
+        
+        if card.isChosen, let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
+            return cards[chosenIndex].isChosen = false
+        }
+        
+        if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
+            cards[chosenIndex].isChosen = true
+            if chosenCards.count == maximumNumberOfChosenCards {
+                if checkForMatch(chosenCards) {
+                    removeMatchedCards()
+                }
+            }
+        }
+    }
+    
+    private func checkForMatch(_ cards: [Card]) -> Bool {
+        return true
+    }
+    
+    private mutating func removeMatchedCards() {
+        for card in cards where card.isChosen {
+            if let matchedIndex = cards.firstIndex(where: { $0.id == card.id }) {
+                cards.remove(at: matchedIndex)
+            }
+        }
     }
 }
 
