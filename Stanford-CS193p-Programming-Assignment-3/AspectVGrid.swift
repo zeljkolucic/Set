@@ -12,7 +12,7 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
     private let aspectRatio: CGFloat
     private let content: (Item) -> ItemView
     
-    private let maximumNumberOfItemsPerRow: CGFloat = 6
+    private let maximumNumberOfItemsPerRow: CGFloat = 5
     
     init(_ items: [Item], aspectRatio: CGFloat, @ViewBuilder content: @escaping (Item) -> ItemView) {
         self.items = items
