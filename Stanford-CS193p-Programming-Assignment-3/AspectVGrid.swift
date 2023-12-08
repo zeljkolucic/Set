@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
-    let items: [Item]
-    let aspectRatio: CGFloat
-    let content: (Item) -> ItemView
+    private let items: [Item]
+    private let aspectRatio: CGFloat
+    private let content: (Item) -> ItemView
+    
+    private let maximumNumberOfItemsPerRow: CGFloat = 6
     
     init(_ items: [Item], aspectRatio: CGFloat, @ViewBuilder content: @escaping (Item) -> ItemView) {
         self.items = items
@@ -20,17 +22,28 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
     
     var body: some View {
         GeometryReader { geometry in
-            let gridItemSize = gridItemWidthThatFits(count: items.count, size: geometry.size, atAspectRatio: aspectRatio)
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
-                ForEach(items) { item in
-                    content(item)
-                        .aspectRatio(aspectRatio, contentMode: .fit)
+            let (gridItemSize, sizeThatFits) = gridItemWidthThatFits(count: items.count, size: geometry.size, atAspectRatio: aspectRatio, withinMaximumNumberOfItemsPerRow: maximumNumberOfItemsPerRow)
+            if sizeThatFits {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
+                    ForEach(items) { item in
+                        content(item)
+                            .aspectRatio(aspectRatio, contentMode: .fit)
+                    }
+                }
+            } else {
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
+                        ForEach(items) { item in
+                            content(item)
+                                .aspectRatio(aspectRatio, contentMode: .fit)
+                        }
+                    }
                 }
             }
         }
     }
     
-    private func gridItemWidthThatFits(count: Int, size: CGSize, atAspectRatio aspectRatio: CGFloat) -> CGFloat {
+    private func gridItemWidthThatFits(count: Int, size: CGSize, atAspectRatio aspectRatio: CGFloat, withinMaximumNumberOfItemsPerRow maximumNumberOfItemsPerRow: CGFloat) -> (width: CGFloat, sizeThatFits: Bool) {
         let count = CGFloat(count)
         var columnCount = 1.0
         
@@ -40,12 +53,14 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
             
             let rowCount = (count / columnCount).rounded(.up)
             if rowCount * height < size.height {
-                return width.rounded(.down)
+                return (width: width.rounded(.down), sizeThatFits: true)
+            } else if columnCount + 1 > maximumNumberOfItemsPerRow {
+                return (width: width.rounded(.down), sizeThatFits: false)
             }
             
             columnCount += 1
         } while columnCount < count
         
-        return min(size.width / count, size.height * aspectRatio).rounded(.down)
+        return (width: min(size.width / count, size.height * aspectRatio).rounded(.down), sizeThatFits: true)
     }
 }
