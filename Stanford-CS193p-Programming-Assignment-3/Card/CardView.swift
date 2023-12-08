@@ -93,6 +93,6 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(Card(color: .pink, number: .three, shape: .squiggle, shading: .striped))
+    CardView(Card(color: .pink, number: .three, shape: .diamond, shading: .striped))
         .padding()
 }

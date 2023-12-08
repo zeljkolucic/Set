@@ -11,7 +11,7 @@ extension Shape {
     func striped(lineWidth: CGFloat) -> some View {
         ZStack {
             Stripe()
-                .stroke(lineWidth: 2)
+                .stroke(lineWidth: 1)
                 .clipShape(self)
 
             self.stroke(lineWidth: lineWidth)

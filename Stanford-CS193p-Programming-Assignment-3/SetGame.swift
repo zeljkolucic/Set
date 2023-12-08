@@ -43,22 +43,39 @@ struct SetGame {
     mutating func choose(_ card: Card) {
         guard chosenCards.count < maximumNumberOfChosenCards else { return }
         
-        if card.isChosen, let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
-            return cards[chosenIndex].isChosen = false
-        }
-        
         if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
+            if card.isChosen {
+                return cards[chosenIndex].isChosen = false
+            }
+            
             cards[chosenIndex].isChosen = true
             if chosenCards.count == maximumNumberOfChosenCards {
                 if checkForMatch(chosenCards) {
                     removeMatchedCards()
+                } else {
+                    deselectChosenCards()
                 }
             }
         }
     }
     
     private func checkForMatch(_ cards: [Card]) -> Bool {
-        return true
+        guard cards.count == maximumNumberOfChosenCards else { return false }
+
+        let colors = Set(cards.map { $0.color })
+        let numbers = Set(cards.map { $0.number })
+        let shapes = Set(cards.map { $0.shape })
+        let shadings = Set(cards.map { $0.shading })
+
+        return colors.count != 2 && numbers.count != 2 && shapes.count != 2 && shadings.count != 2
+    }
+    
+    private mutating func deselectChosenCards() {
+        for card in cards where card.isChosen {
+            if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
+                cards[chosenIndex].isChosen = false
+            }
+        }
     }
     
     private mutating func removeMatchedCards() {
