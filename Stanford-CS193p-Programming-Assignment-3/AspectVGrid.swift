@@ -24,21 +24,20 @@ struct AspectVGrid<Item: Identifiable, ItemView: View>: View {
         GeometryReader { geometry in
             let (gridItemSize, sizeThatFits) = gridItemWidthThatFits(count: items.count, size: geometry.size, atAspectRatio: aspectRatio, withinMaximumNumberOfItemsPerRow: maximumNumberOfItemsPerRow)
             if sizeThatFits {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
-                    ForEach(items) { item in
-                        content(item)
-                            .aspectRatio(aspectRatio, contentMode: .fit)
-                    }
-                }
+                itemsGrid(withGridItemSize: gridItemSize)
             } else {
                 ScrollView {
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
-                        ForEach(items) { item in
-                            content(item)
-                                .aspectRatio(aspectRatio, contentMode: .fit)
-                        }
-                    }
+                    itemsGrid(withGridItemSize: gridItemSize)
                 }
+            }
+        }
+    }
+    
+    private func itemsGrid(withGridItemSize gridItemSize: CGFloat) -> some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: gridItemSize), spacing: 0)], spacing: 0) {
+            ForEach(items) { item in
+                content(item)
+                    .aspectRatio(aspectRatio, contentMode: .fit)
             }
         }
     }
