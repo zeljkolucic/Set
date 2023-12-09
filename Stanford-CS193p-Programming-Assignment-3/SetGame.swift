@@ -59,6 +59,22 @@ struct SetGame {
         }
     }
     
+    mutating func restart() {
+        deckOfCards = [Card]()
+        for color in Card.Color.allCases {
+            for number in Card.Number.allCases {
+                for shape in Card.Shape.allCases {
+                    for shading in Card.Shading.allCases {
+                        let card = Card(color: color, number: number, shape: shape, shading: shading)
+                        deckOfCards.append(card)
+                    }
+                }
+            }
+        }
+        deckOfCards.shuffle()
+        cards = deckOfCards.draw(initialNumberOfCards)
+    }
+    
     private func checkForMatch(_ cards: [Card]) -> Bool {
         guard cards.count == maximumNumberOfChosenCards else { return false }
 

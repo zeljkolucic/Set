@@ -16,8 +16,7 @@ struct SetGameView: View {
     var body: some View {
         VStack {
             cards
-            drawButton
-                .opacity(viewModel.deckOfCards.isEmpty ? 0 : 1)
+            actions
         }
         .padding()
     }
@@ -33,11 +32,32 @@ struct SetGameView: View {
         }
     }
     
-    private var drawButton: some View {
+    private var actions: some View {
+        HStack {
+            drawThree
+                .opacity(viewModel.deckOfCards.isEmpty ? 0 : 1)
+            Spacer()
+            restartGame
+        }
+        .padding()
+        .cardify()
+        .aspectRatio(7, contentMode: .fit)
+    }
+    
+    private var drawThree: some View {
         Button(action: {
             viewModel.draw()
         }, label: {
             Text("Draw 3")
+        })
+    }
+    
+    private var restartGame: some View {
+        Button(action: {
+            viewModel.restartGame()
+        }, label: {
+            Image(systemName: "arrow.clockwise.circle")
+                .imageScale(.large)
         })
     }
 }

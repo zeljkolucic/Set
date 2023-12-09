@@ -25,4 +25,8 @@ class SetGameViewModel: ObservableObject {
     func choose(_ card: Card) {
         game.choose(card)
     }
+    
+    func restartGame() {
+        game.restart()
+    }
 }
