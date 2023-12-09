@@ -27,7 +27,7 @@ struct SetGameView: View {
                 .padding(spacing)
                 .scaleEffect(card.isChosen ? 0.8 : 1)
                 .onTapGesture {
-                    viewModel.choose(card)
+                    choose(card)
                 }
         }
     }
@@ -59,6 +59,11 @@ struct SetGameView: View {
             Image(systemName: "arrow.clockwise.circle")
                 .imageScale(.large)
         })
+    }
+    private func choose(_ card: Card) {
+        withAnimation(.easeInOut(duration: 0.2)) {
+            viewModel.choose(card)
+        }
     }
 }
 
