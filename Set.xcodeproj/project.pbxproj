@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4AAB86D2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */; };
-		E4AAB86F2AFD140700470542 /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AAB86E2AFD140700470542 /* SetGameView.swift */; };
-		E4AAB8712AFD140800470542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AAB8702AFD140800470542 /* Assets.xcassets */; };
-		E4AAB8742AFD140800470542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4AAB8732AFD140800470542 /* Preview Assets.xcassets */; };
-		E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF32B1A3B1800AC9960 /* CardView.swift */; };
-		E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */; };
-		E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */; };
-		E4CBDAFA2B1BE3CA00AC9960 /* Shape+striped.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAF92B1BE3CA00AC9960 /* Shape+striped.swift */; };
-		E4CBDAFC2B1BF3E000AC9960 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAFB2B1BF3E000AC9960 /* Card.swift */; };
-		E4CBDAFE2B1BF51300AC9960 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAFD2B1BF51300AC9960 /* Cardify.swift */; };
-		E4CBDB002B1BF63500AC9960 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDAFF2B1BF63500AC9960 /* AspectVGrid.swift */; };
-		E4CBDB022B1BF6F500AC9960 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDB012B1BF6F500AC9960 /* SetGame.swift */; };
-		E4CBDB042B1BF81500AC9960 /* SetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBDB032B1BF81500AC9960 /* SetGameViewModel.swift */; };
+		E4B80E532B4E896A00DA1303 /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E442B4E896A00DA1303 /* AspectVGrid.swift */; };
+		E4B80E542B4E896A00DA1303 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E462B4E896A00DA1303 /* Cardify.swift */; };
+		E4B80E552B4E896A00DA1303 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E472B4E896A00DA1303 /* CardView.swift */; };
+		E4B80E562B4E896A00DA1303 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E482B4E896A00DA1303 /* Card.swift */; };
+		E4B80E572B4E896A00DA1303 /* Shape+striped.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E492B4E896A00DA1303 /* Shape+striped.swift */; };
+		E4B80E582B4E896A00DA1303 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E4A2B4E896A00DA1303 /* Diamond.swift */; };
+		E4B80E592B4E896A00DA1303 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E4B2B4E896A00DA1303 /* Squiggle.swift */; };
+		E4B80E5A2B4E896A00DA1303 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E4C2B4E896A00DA1303 /* Set.swift */; };
+		E4B80E5B2B4E896A00DA1303 /* SetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E4D2B4E896A00DA1303 /* SetGameViewModel.swift */; };
+		E4B80E5C2B4E896A00DA1303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B80E4E2B4E896A00DA1303 /* Assets.xcassets */; };
+		E4B80E5D2B4E896A00DA1303 /* SetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E4F2B4E896A00DA1303 /* SetGameView.swift */; };
+		E4B80E5E2B4E896A00DA1303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B80E512B4E896A00DA1303 /* Preview Assets.xcassets */; };
+		E4B80E5F2B4E896A00DA1303 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B80E522B4E896A00DA1303 /* SetGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E4AAB8692AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stanford-CS193p-Programming-Assignment-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stanford_CS193p_Programming_Assignment_3App.swift; sourceTree = "<group>"; };
-		E4AAB86E2AFD140700470542 /* SetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
-		E4AAB8702AFD140800470542 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E4AAB8732AFD140800470542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E4CBDAF32B1A3B1800AC9960 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
-		E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
-		E4CBDAF92B1BE3CA00AC9960 /* Shape+striped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape+striped.swift"; sourceTree = "<group>"; };
-		E4CBDAFB2B1BF3E000AC9960 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		E4CBDAFD2B1BF51300AC9960 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
-		E4CBDAFF2B1BF63500AC9960 /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
-		E4CBDB012B1BF6F500AC9960 /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
-		E4CBDB032B1BF81500AC9960 /* SetGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameViewModel.swift; sourceTree = "<group>"; };
+		E4AAB8692AFD140700470542 /* Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Set.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B80E442B4E896A00DA1303 /* AspectVGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
+		E4B80E462B4E896A00DA1303 /* Cardify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		E4B80E472B4E896A00DA1303 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E4B80E482B4E896A00DA1303 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		E4B80E492B4E896A00DA1303 /* Shape+striped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shape+striped.swift"; sourceTree = "<group>"; };
+		E4B80E4A2B4E896A00DA1303 /* Diamond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
+		E4B80E4B2B4E896A00DA1303 /* Squiggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
+		E4B80E4C2B4E896A00DA1303 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
+		E4B80E4D2B4E896A00DA1303 /* SetGameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGameViewModel.swift; sourceTree = "<group>"; };
+		E4B80E4E2B4E896A00DA1303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4B80E4F2B4E896A00DA1303 /* SetGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGameView.swift; sourceTree = "<group>"; };
+		E4B80E512B4E896A00DA1303 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E4B80E522B4E896A00DA1303 /* SetGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		E4AAB8602AFD140700470542 = {
 			isa = PBXGroup;
 			children = (
-				E4AAB86B2AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3 */,
+				E4B80E432B4E896A00DA1303 /* Set */,
 				E4AAB86A2AFD140700470542 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,53 +61,53 @@
 		E4AAB86A2AFD140700470542 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4AAB8692AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3.app */,
+				E4AAB8692AFD140700470542 /* Set.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E4AAB86B2AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3 */ = {
+		E4B80E432B4E896A00DA1303 /* Set */ = {
 			isa = PBXGroup;
 			children = (
-				E4AAB86C2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift */,
-				E4AAB86E2AFD140700470542 /* SetGameView.swift */,
-				E4CBDB012B1BF6F500AC9960 /* SetGame.swift */,
-				E4CBDB032B1BF81500AC9960 /* SetGameViewModel.swift */,
-				E4CBDAFF2B1BF63500AC9960 /* AspectVGrid.swift */,
-				E4CBDB052B21DED800AC9960 /* Card */,
-				E4AAB8702AFD140800470542 /* Assets.xcassets */,
-				E4AAB8722AFD140800470542 /* Preview Content */,
+				E4B80E442B4E896A00DA1303 /* AspectVGrid.swift */,
+				E4B80E452B4E896A00DA1303 /* Card */,
+				E4B80E4C2B4E896A00DA1303 /* Set.swift */,
+				E4B80E4D2B4E896A00DA1303 /* SetGameViewModel.swift */,
+				E4B80E4E2B4E896A00DA1303 /* Assets.xcassets */,
+				E4B80E4F2B4E896A00DA1303 /* SetGameView.swift */,
+				E4B80E502B4E896A00DA1303 /* Preview Content */,
+				E4B80E522B4E896A00DA1303 /* SetGame.swift */,
 			);
-			path = "Stanford-CS193p-Programming-Assignment-3";
+			path = Set;
 			sourceTree = "<group>";
 		};
-		E4AAB8722AFD140800470542 /* Preview Content */ = {
+		E4B80E452B4E896A00DA1303 /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				E4AAB8732AFD140800470542 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E4CBDB052B21DED800AC9960 /* Card */ = {
-			isa = PBXGroup;
-			children = (
-				E4CBDAF32B1A3B1800AC9960 /* CardView.swift */,
-				E4CBDAFD2B1BF51300AC9960 /* Cardify.swift */,
-				E4CBDAFB2B1BF3E000AC9960 /* Card.swift */,
-				E4CBDAF92B1BE3CA00AC9960 /* Shape+striped.swift */,
-				E4CBDAF52B1A3BAC00AC9960 /* Diamond.swift */,
-				E4CBDAF72B1A408B00AC9960 /* Squiggle.swift */,
+				E4B80E462B4E896A00DA1303 /* Cardify.swift */,
+				E4B80E472B4E896A00DA1303 /* CardView.swift */,
+				E4B80E482B4E896A00DA1303 /* Card.swift */,
+				E4B80E492B4E896A00DA1303 /* Shape+striped.swift */,
+				E4B80E4A2B4E896A00DA1303 /* Diamond.swift */,
+				E4B80E4B2B4E896A00DA1303 /* Squiggle.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		E4B80E502B4E896A00DA1303 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				E4B80E512B4E896A00DA1303 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4AAB8682AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3 */ = {
+		E4AAB8682AFD140700470542 /* Set */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4AAB8772AFD140800470542 /* Build configuration list for PBXNativeTarget "Stanford-CS193p-Programming-Assignment-3" */;
+			buildConfigurationList = E4AAB8772AFD140800470542 /* Build configuration list for PBXNativeTarget "Set" */;
 			buildPhases = (
 				E4AAB8652AFD140700470542 /* Sources */,
 				E4AAB8662AFD140700470542 /* Frameworks */,
@@ -117,9 +117,9 @@
 			);
 			dependencies = (
 			);
-			name = "Stanford-CS193p-Programming-Assignment-3";
+			name = Set;
 			productName = "Stanford-CS193p-Programming-Assignment-3";
-			productReference = E4AAB8692AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3.app */;
+			productReference = E4AAB8692AFD140700470542 /* Set.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E4AAB8642AFD140700470542 /* Build configuration list for PBXProject "Stanford-CS193p-Programming-Assignment-3" */;
+			buildConfigurationList = E4AAB8642AFD140700470542 /* Build configuration list for PBXProject "Set" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -150,7 +150,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E4AAB8682AFD140700470542 /* Stanford-CS193p-Programming-Assignment-3 */,
+				E4AAB8682AFD140700470542 /* Set */,
 			);
 		};
 /* End PBXProject section */
@@ -160,8 +160,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4AAB8742AFD140800470542 /* Preview Assets.xcassets in Resources */,
-				E4AAB8712AFD140800470542 /* Assets.xcassets in Resources */,
+				E4B80E5E2B4E896A00DA1303 /* Preview Assets.xcassets in Resources */,
+				E4B80E5C2B4E896A00DA1303 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,17 +172,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4CBDAF82B1A408B00AC9960 /* Squiggle.swift in Sources */,
-				E4CBDAF62B1A3BAC00AC9960 /* Diamond.swift in Sources */,
-				E4CBDB022B1BF6F500AC9960 /* SetGame.swift in Sources */,
-				E4CBDAFE2B1BF51300AC9960 /* Cardify.swift in Sources */,
-				E4CBDAFC2B1BF3E000AC9960 /* Card.swift in Sources */,
-				E4AAB86F2AFD140700470542 /* SetGameView.swift in Sources */,
-				E4CBDB042B1BF81500AC9960 /* SetGameViewModel.swift in Sources */,
-				E4CBDAFA2B1BE3CA00AC9960 /* Shape+striped.swift in Sources */,
-				E4CBDAF42B1A3B1800AC9960 /* CardView.swift in Sources */,
-				E4AAB86D2AFD140700470542 /* Stanford_CS193p_Programming_Assignment_3App.swift in Sources */,
-				E4CBDB002B1BF63500AC9960 /* AspectVGrid.swift in Sources */,
+				E4B80E5F2B4E896A00DA1303 /* SetGame.swift in Sources */,
+				E4B80E552B4E896A00DA1303 /* CardView.swift in Sources */,
+				E4B80E5D2B4E896A00DA1303 /* SetGameView.swift in Sources */,
+				E4B80E582B4E896A00DA1303 /* Diamond.swift in Sources */,
+				E4B80E572B4E896A00DA1303 /* Shape+striped.swift in Sources */,
+				E4B80E5A2B4E896A00DA1303 /* Set.swift in Sources */,
+				E4B80E562B4E896A00DA1303 /* Card.swift in Sources */,
+				E4B80E542B4E896A00DA1303 /* Cardify.swift in Sources */,
+				E4B80E592B4E896A00DA1303 /* Squiggle.swift in Sources */,
+				E4B80E532B4E896A00DA1303 /* AspectVGrid.swift in Sources */,
+				E4B80E5B2B4E896A00DA1303 /* SetGameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Stanford-CS193p-Programming-Assignment-3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Set/Preview Content\"";
 				DEVELOPMENT_TEAM = WHP9Z6BC8S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -344,7 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Stanford-CS193p-Programming-Assignment-3/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Set/Preview Content\"";
 				DEVELOPMENT_TEAM = WHP9Z6BC8S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -369,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4AAB8642AFD140700470542 /* Build configuration list for PBXProject "Stanford-CS193p-Programming-Assignment-3" */ = {
+		E4AAB8642AFD140700470542 /* Build configuration list for PBXProject "Set" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4AAB8752AFD140800470542 /* Debug */,
@@ -378,7 +378,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4AAB8772AFD140800470542 /* Build configuration list for PBXNativeTarget "Stanford-CS193p-Programming-Assignment-3" */ = {
+		E4AAB8772AFD140800470542 /* Build configuration list for PBXNativeTarget "Set" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4AAB8782AFD140800470542 /* Debug */,

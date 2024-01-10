@@ -60,6 +60,7 @@ struct SetGameView: View {
                 .imageScale(.large)
         })
     }
+    
     private func choose(_ card: Card) {
         withAnimation(.easeInOut(duration: 0.2)) {
             viewModel.choose(card)

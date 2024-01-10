@@ -1,6 +1,6 @@
 //
-//  Stanford_CS193p_Programming_Assignment_3App.swift
-//  Stanford-CS193p-Programming-Assignment-3
+//  Set.swift
+//  Set
 //
 //  Created by Zeljko Lucic on 9.11.23..
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Stanford_CS193p_Programming_Assignment_3App: App {
+struct Set: App {
     @StateObject var game = SetGameViewModel()
     
     var body: some Scene {

@@ -78,10 +78,10 @@ struct SetGame {
     private func checkForMatch(_ cards: [Card]) -> Bool {
         guard cards.count == maximumNumberOfChosenCards else { return false }
 
-        let colors = Set(cards.map { $0.color })
-        let numbers = Set(cards.map { $0.number })
-        let shapes = Set(cards.map { $0.shape })
-        let shadings = Set(cards.map { $0.shading })
+        let colors = Swift.Set(cards.map { $0.color })
+        let numbers = Swift.Set(cards.map { $0.number })
+        let shapes = Swift.Set(cards.map { $0.shape })
+        let shadings = Swift.Set(cards.map { $0.shading })
 
         return colors.count != 2 && numbers.count != 2 && shapes.count != 2 && shadings.count != 2
     }
